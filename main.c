@@ -27,7 +27,7 @@ int main(int argc, const char * argv[]) {
     FILE* fp; //파일 입출력 
     int pIndex, age, time;
     int placeHist[N_HISTORY];
-    int p_num; 
+    int p_num, max_age, min_age; 
     
     //------------- 1. loading patient info file ------------------------------
     //1-1. FILE pointer open
@@ -72,19 +72,33 @@ int main(int argc, const char * argv[]) {
             case MENU_PATIENT:
                 printf("Enter the patient number: ");
                 scanf("%i",&p_num);
+                //printf("");넘버에 맞는 환자 정보 호출 
                 
                 break;
                 
             case MENU_PLACE:
-                
+                //
                 break;
                 
             case MENU_AGE:
-                
+                printf("Enter the max age: ");
+                scanf("%i",&max_age);
+                printf("Enter the min age: ");
+                scanf("%i",&min_age);
+                if(age<max_age&&age>min_age){
+                	printf("%i",patient_number)
+				}
                 break;
                 
             case MENU_TRACK:
-                    
+                    /* N일 감염자
+					for(i=4;i>0;i--)
+						if(N-4==감염확인일자)
+							if(감염 확인 당시 장소==N일 감염자 N-4일 위치)
+							감염원 발견, break;  
+							감염원을 대상으로 다시 진행 
+					  */
+				while()
                 break;
                 
             default:
@@ -96,4 +110,8 @@ int main(int argc, const char * argv[]) {
     
     
     return 0;
+}
+
+int trackInfester(int patient_no, int *detected_time, int *place){
+	
 }
